@@ -563,8 +563,6 @@ SquabySceneBase {
           for (var i in scene.level.waves) {
             sum += scene.level.waves[i].amount
           }
-
-          infinario.track('level_start', {level_id: levelEditor.currentLevelData.levelMetaData.levelId, level_name: levelEditor.currentLevelData.levelMetaData.levelName, monsters: sum})
       }
 
       console.debug("SquabyScene: end of enterScene()")

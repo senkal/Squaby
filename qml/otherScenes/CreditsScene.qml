@@ -131,7 +131,7 @@ SquabySceneBase {
 
       MouseArea {
         anchors.fill: parent
-        onClicked: nativeUtils.openUrl("http://v-play.net/showcases/?utm_medium=game&utm_source=squaby&utm_campaign=squaby#squaby");
+        onClicked: nativeUtils.openUrl("https://v-play.net/showcases/?utm_medium=game&utm_source=squaby&utm_campaign=squaby#squaby");
       }
     }
   }

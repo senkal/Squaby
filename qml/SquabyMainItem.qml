@@ -1,8 +1,5 @@
 import QtQuick 2.0
 import VPlay 2.0
-// Plugins
-//import VPlayPlugins.gamecenter 1.0
-import VPlayPlugins.flurry 1.0
 
 import "otherScenes"
 import "gameScene"

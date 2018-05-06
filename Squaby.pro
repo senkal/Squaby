@@ -25,44 +25,15 @@ RESOURCES += \
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp
 
-# uncomment this to use the V-Play Plugins in Squaby
-# NOTE: you can only enable the plugins, after installing them with the Qt installer
-# see V-Play Plugins installation guide how to install the plugins on your PC:
-# http://plugins.v-play.net/doc/plugin-installation/
-# once you installed the plugins, you MUST enable this config!
-# to run the demo with included plugins, you also need to modify the path to your Android SDK of these files:
-# - vendor/facebook/local.properties
-# - vendor/google-play-services_lib/local.properties
-#CONFIG += includePlugins
-
 android {
-
-    includePlugins {
-
-        LIBS += -lAdmobPlugin
-        LIBS += -lFacebookPlugin
-        LIBS += -lFlurryPlugin
-        LIBS += -lSoomlaPlugin
-
-        # the android-plugins folder has a different AndroidManifest and project.properties file
-        ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-plugins
-        # so it gets displayed in QtCreator in the other files
-        OTHER_FILES += android-plugins/AndroidManifest.xml
-        OTHER_FILES += android-plugins/project.properties
-    } else {
-
-        ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
-        OTHER_FILES += android/AndroidManifest.xml
-    }
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+    OTHER_FILES += android/AndroidManifest.xml
 }
 
 ios {
     QMAKE_INFO_PLIST = ios/Project-Info.plist
     OTHER_FILES += $$QMAKE_INFO_PLIST
-
-    includePlugins {
-        QMAKE_LFLAGS += -ObjC
-        LIBS += -L$$PWD/ios # for AdMob & Flurry - the .a libs should be copied in this folder
-        LIBS += -F~/Documents/FacebookSDK -framework FacebookSDK # for Facebook - if you choose another location in the FacebookSDK installation, use that one here
-    }
 }
+
+# Uncomment for using iOS plugin libraries
+# VPLAY_PLUGINS += admob chartboost facebook flurry soomla

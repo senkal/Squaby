@@ -233,7 +233,7 @@ SquabySceneBase {
           Qt.quit()
         } else if(accepted && vplayLinkShown) {
           flurry.logEvent("MainScene.Show.VPlayWeb")
-          nativeUtils.openUrl("http://v-play.net/showcases/?utm_medium=game&utm_source=squaby&utm_campaign=squaby#squaby");
+          nativeUtils.openUrl("https://v-play.net/showcases/?utm_medium=game&utm_source=squaby&utm_campaign=squaby#squaby");
         }
 
         // set it to false again
