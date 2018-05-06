@@ -87,7 +87,7 @@ SquabySceneBase {
       //anchors.horizontalCenter: parent.horizontalCenter
       //anchors.top: parent.top
       // the AdMob.Smart enum is only available on the platforms where the AdMob plugin is supported, so only on iOS & Android
-      banner: (system.isPlatform(System.IOS) || system.isPlatform(System.Android)) ? AdMobBanner.Smart : undefined
+      banner: (system.isPlatform(System.IOS) || system.isPlatform(System.Android)) ? AdMobBanner.Smart : 0
     }
   }
 
